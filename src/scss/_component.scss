@@ -1,0 +1,11 @@
+@use "variables";
+
+//Centers map and fixed layout to make it responsive
+#map {
+  margin: 0 auto;
+  border-radius: variables.$border-radius;
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}

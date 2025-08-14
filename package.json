@@ -1,0 +1,28 @@
+{
+  "name": "projekt_dt211g",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Evelina Olsson",
+  "license": "ISC",
+  "source": "src/index.html",
+"scripts": {
+  "start": "parcel src/index.html",
+  "build": "parcel build src/index.html && cp public/*.json dist/"
+},
+  "description": "Projekt för dt211g",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "jsdoc": "^4.0.4",
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "chart.js": "^4.5.0",
+    "sass": "^1.85.0"
+  }
+}

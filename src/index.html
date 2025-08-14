@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.scss">
+    <title>CityPulse</title>
+    <script src="js/main.js" type="module"></script>
+    <link rel="icon" type="image/png" href="images/citypulse_favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="hamburger-menu">☰</div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#weather">Weather Pulse</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+                    <h1>
+                <picture>
+                    <source srcset="images/citypulse_logo_800w.webp" type="image/webp" media="(min-width: 800px)">
+                    <source srcset="images/citypulse_logo_400w.webp" type="image/webp" media="(min-width: 600px)">
+                    <source srcset="images/citypulse_logo_200w.webp" type="image/webp">
+                    <img src="images/citypulse_logo.png" alt="Citypulse logo" width="800"
+                        height="240" loading="lazy">
+                </picture>
+            </h1>
+        <picture>
+            <source srcset="images/citypulse_header_1920w.webp" type="image/webp" media="(min-width: 800px)">
+            <source srcset="images/citypulse_header_1024w.webp" type="image/webp" media="(min-width: 600px)">
+            <source srcset="images/citypulse_header_800w.webp" type="image/webp">
+            <img src="images/citypulse_header.jpg" alt="En publik som står framför en mörk scen" width="1920"
+                height="600" loading="lazy">
+        </picture>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>WELCOME TO CITY PULSE</h2>
+            <p>Your go-to source for local events and weather updates</p>
+
+            <h3>About this site</h3>
+
+            <p> At City Pulse, we understand the importance of staying connected with your community. Our platform
+                is dedicated to providing you with the latest information on upcoming events and accurate weather
+                forecasts, ensuring you never miss out on what’s happening in your area.
+                With a user-friendly interface and a commitment to delivering timely updates, we strive to keep you
+                informed and engaged. Whether you're looking for family-friendly activities, cultural events, or
+                outdoor adventures, City Pulse is your trusted companion for planning your outings. Experience the
+                convenience of having everything you need to know about your city at your fingertips.
+            </p>
+
+        </section>
+
+        <div class="banner">
+            <p>🎶 Stay ahead. Stay updated. 🎶 Weather & events at a glance. </p>
+        </div>
+
+        <section id="discover">
+
+            <h2>Discover</h2>
+            <p>Explore your surroundings like never before. Whether you’re planning a night out, looking for the
+                next big concert,
+                or just checking if the weather is on your side. CityPulse brings it all together in one interactive
+                map. Simply search for your city, click on a location, and discover upcoming events alongside
+                real-time weather updates.</p>
+
+            <form id="searchEvent">
+                <input type="text" id="eventInput" placeholder="Search Event">
+                <button class="button-sass" type="submit">Search</button>
+            </form>
+
+            <div id="map"></div>
+
+        </section>
+
+        <section id="weather">
+
+
+        </section>
+
+        <section id="contact">
+         
+        </section>
+    </main>
+
+    <footer>
+        <p>© All Rights Reserved. City Pulse</p>
+    </footer>
+</body>

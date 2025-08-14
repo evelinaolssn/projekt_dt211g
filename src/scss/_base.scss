@@ -1,0 +1,112 @@
+@use "variables";
+
+//Entire page body style 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+}
+
+//Header styling
+header {
+    background-color: variables.$primary-color;
+    margin: 0 auto;
+}
+
+//Centers main heading
+header h1 {
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+header h1 img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+header picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Title design*/
+h2 {
+    text-align: center;
+    padding: 1rem;
+    color: darken(variables.$secondary-color, 25%);
+}
+
+h3 {
+    color: lighten(variables.$text-color, 20%);
+}
+
+//Navigation menu layout and design 
+.navigation {
+    ul {
+        background-color: variables.$secondary-color;
+        margin: 0 auto;
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        gap: 3rem;
+        padding: 1rem;
+    }
+
+    a {
+        color: variables.$secondary-text-color;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: variables.$border-radius;
+
+        &:hover {
+            background-color: darken(variables.$secondary-color, 10%);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        ul {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &.visible ul {
+            display: flex;
+            position: absolute;
+            top: 50px;
+            left: 50vw;
+            right: 0;
+            z-index: 999;
+            padding: 2rem 0;
+        }
+    }
+}
+
+//Hidden hamburger menu while full navigation menu is displayed
+.hamburger-menu {
+    display: none;
+    background-color: variables.$secondary-color;
+    color: variables.$secondary-text-color;
+
+    @media (max-width: 1024px) {
+        display: block;
+        text-align: right;
+        padding-right: 2rem;
+        font-size: 2rem;
+    }
+}
+
+//Footer styling
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin: 3rem auto 0 auto;
+    background-color: variables.$secondary-color;
+    color: variables.$secondary-text-color;
+}

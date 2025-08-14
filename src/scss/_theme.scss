@@ -1,0 +1,31 @@
+@use "variables";
+
+// Switch to dark theme colors
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: variables.$dark-background-color;
+        color: variables.$dark-text-color;
+    }
+
+    header {
+        background-color: variables.$dark-primary-color;
+    }
+
+    .navigation ul {
+        background-color: variables.$dark-secondary-color;
+    }
+
+    .navigation a {
+        color: variables.$dark-secondary-text-color; 
+    }
+
+    h2,
+    h3 {
+        color: variables.$dark-primary-color;
+    }
+
+    footer {
+        background-color: variables.$dark-primary-color;
+        color: variables.$dark-text-color;
+    }
+}
