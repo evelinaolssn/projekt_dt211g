@@ -1,5 +1,44 @@
 @use "variables";
 
+// Banner styling
+.banner {
+  background-color: variables.$dark-primary-color;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 1.2rem 0;
+  overflow: hidden;
+}
+
+// Gradient text with soft shifting colors and shadow
+.banner p {
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  background: linear-gradient(
+    87deg,
+    #ad936f 0%,
+    #fcb69f 25%,
+    #d24449 50%,
+    #fad0c4 75%,
+    #f1ddc0 100%
+  );
+  background-size: 250%;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  // Soft glow that stays visible even if gradient isn't supported
+  text-shadow: 0 0 8px rgba(255, 224, 200, 0.4);
+
+  animation: colorShift 9s ease-in-out infinite;
+}
+
+//Makes slower gradient movement
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  30% { background-position: 50% 60%; }
+  60% { background-position: 100% 40%; }
+  100% { background-position: 0% 50%; }
+}
+
 //Centers map and fixed layout to make it responsive
 #map {
   margin: 0 auto;

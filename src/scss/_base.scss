@@ -19,11 +19,11 @@ header {
 //Centers main heading
 header h1 {
     margin: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;   
 }
 
 header h1 img {
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
     display: block;
 }
@@ -39,10 +39,12 @@ h2 {
     text-align: center;
     padding: 1rem;
     color: darken(variables.$secondary-color, 25%);
+    border-bottom: 4px solid variables.$secondary-color;
 }
 
 h3 {
     color: lighten(variables.$text-color, 20%);
+    text-align: center;
 }
 
 //Navigation menu layout and design 
@@ -55,6 +57,7 @@ h3 {
         list-style: none;
         gap: 3rem;
         padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     a {
@@ -86,6 +89,12 @@ h3 {
             padding: 2rem 0;
         }
     }
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem;
 }
 
 //Hidden hamburger menu while full navigation menu is displayed
