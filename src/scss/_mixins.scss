@@ -1,2 +1,16 @@
 @use "variables";
 
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border-radius: variables.$border-radius;
+  border: 3px solid variables.$dark-secondary-color;
+
+  // Hover effect
+  &:hover {
+    background-color: darken($bg-color, 15%);
+  }
+}

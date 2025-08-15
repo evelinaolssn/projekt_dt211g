@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="./scss/main.scss">
     <title>CityPulse</title>
     <script src="js/main.js" type="module"></script>
+        <script src="js/map.js" type="module"></script>
     <link rel="icon" type="image/png" href="images/citypulse_favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 </head>
 
 <body>
@@ -24,15 +30,14 @@
                 </ul>
             </nav>
         </div>
-                    <h1>
-                <picture>
-                    <source srcset="images/citypulse_logo_800w.webp" type="image/webp" media="(min-width: 800px)">
-                    <source srcset="images/citypulse_logo_400w.webp" type="image/webp" media="(min-width: 600px)">
-                    <source srcset="images/citypulse_logo_200w.webp" type="image/webp">
-                    <img src="images/citypulse_logo.png" alt="Citypulse logo" width="800"
-                        height="240" loading="lazy">
-                </picture>
-            </h1>
+        <h1>
+            <picture>
+                <source srcset="images/citypulse_logo_800w.webp" type="image/webp" media="(min-width: 800px)">
+                <source srcset="images/citypulse_logo_400w.webp" type="image/webp" media="(min-width: 600px)">
+                <source srcset="images/citypulse_logo_200w.webp" type="image/webp">
+                <img src="images/citypulse_logo.png" alt="Citypulse logo" width="800" height="240" loading="lazy">
+            </picture>
+        </h1>
         <picture>
             <source srcset="images/citypulse_header_1920w.webp" type="image/webp" media="(min-width: 800px)">
             <source srcset="images/citypulse_header_1024w.webp" type="image/webp" media="(min-width: 600px)">
@@ -75,7 +80,7 @@
 
             <form id="searchEvent">
                 <input type="text" id="eventInput" placeholder="Search Event">
-                <button class="button-sass" type="submit">Search</button>
+                <button class="button-style" type="submit">Search</button>
             </form>
 
             <div id="map"></div>
@@ -88,7 +93,7 @@
         </section>
 
         <section id="contact">
-         
+
         </section>
     </main>
 

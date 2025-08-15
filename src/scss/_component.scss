@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 // Banner styling
 .banner {
@@ -13,14 +14,12 @@
 .banner p {
   font-size: 1.6rem;
   letter-spacing: 1.5px;
-  background: linear-gradient(
-    87deg,
-    #ad936f 0%,
-    #fcb69f 25%,
-    #d24449 50%,
-    #fad0c4 75%,
-    #f1ddc0 100%
-  );
+  background: linear-gradient(87deg,
+      #ad936f 0%,
+      #fcb69f 25%,
+      #d24449 50%,
+      #fad0c4 75%,
+      #f1ddc0 100%);
   background-size: 250%;
   -webkit-background-clip: text;
   color: transparent;
@@ -33,11 +32,46 @@
 
 //Makes slower gradient movement
 @keyframes colorShift {
-  0% { background-position: 0% 50%; }
-  30% { background-position: 50% 60%; }
-  60% { background-position: 100% 40%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  30% {
+    background-position: 50% 60%;
+  }
+
+  60% {
+    background-position: 100% 40%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
+
+// Centers searchbar and style for input field and search button
+#searchEvent {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 3rem;
+
+  input {
+    padding: 1rem;
+    border-radius: variables.$border-radius;
+    border: 1px solid variables.$secondary-color;
+    width: 250px;
+    font-size: 1rem;
+  }
+
+  .button-style {
+    @include mixins.button-style(variables.$secondary-color, variables.$secondary-text-color);
+  }
+
+}
+
+
 
 //Centers map and fixed layout to make it responsive
 #map {
