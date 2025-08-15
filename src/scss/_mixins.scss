@@ -1,5 +1,7 @@
 @use "variables";
 
+
+//Style for buttons
 @mixin button-style($bg-color, $text-color) {
   background-color: $bg-color;
   color: $text-color;
