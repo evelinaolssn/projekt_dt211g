@@ -16,7 +16,16 @@
     }
 
     .navigation a {
-        color: variables.$dark-secondary-text-color; 
+        color: variables.$dark-secondary-text-color;
+
+        &:hover {
+            color: variables.$dark-text-color;
+        }
+    }
+
+    .hamburger-menu {
+        background-color: variables.$dark-secondary-color;
+        color: variables.$dark-secondary-text-color;
     }
 
     h2,

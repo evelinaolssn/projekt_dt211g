@@ -68,7 +68,13 @@
   .button-style {
     @include mixins.button-style(variables.$secondary-color, variables.$secondary-text-color);
   }
-
+  
+  //Responsive layout for screens smaller than 421px
+  @media (max-width: 420px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 //Centers map and fixed layout to make it responsive
@@ -84,12 +90,14 @@
 
 //Styling for event element
 #events ul {
-    text-align: center;
-    list-style-type: none;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
 }
 
 #events a {
- color: variables.$dark-secondary-color;
+  color: variables.$dark-secondary-color;
 }
 
 //Styling for weather element 
@@ -103,7 +111,7 @@
   text-align: center;
 }
 
-#weather h3{
+#weather h3 {
   color: variables.$dark-secondary-color;
 }
 
@@ -140,7 +148,8 @@
         transition: color 0.3s ease;
 
         &:hover {
-          color: variables.$dark-secondary-color;;
+          color: variables.$dark-secondary-color;
+          ;
         }
       }
     }

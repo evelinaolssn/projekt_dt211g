@@ -34,7 +34,7 @@ header picture img {
     display: block;
 }
 
-/*Title design*/
+// Title design
 h2 {
     text-align: center;
     padding: 1rem;
@@ -98,6 +98,12 @@ section {
     max-width: 800px;
     margin: 0 auto;
     padding: 6rem;
+
+    //Responsive padding for screens smaller than 521px
+    @media (max-width: 520px) {
+        padding: 2rem;
+        margin-top: 3rem;
+    }
 }
 
 //Hidden hamburger menu while full navigation menu is displayed
