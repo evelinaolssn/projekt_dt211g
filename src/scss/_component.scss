@@ -1,5 +1,6 @@
 @use "variables";
 @use "mixins";
+@use "animation";
 
 // Banner styling
 .banner {
@@ -29,26 +30,6 @@
 
   animation: colorShift 9s ease-in-out infinite;
 }
-
-//Makes slower gradient movement
-@keyframes colorShift {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  30% {
-    background-position: 50% 60%;
-  }
-
-  60% {
-    background-position: 100% 40%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 
 // Centers searchbar and style for input field and search button
 #searchEvent {
@@ -154,4 +135,14 @@
       }
     }
   }
+}
+
+//Back to top button with styling and 
+.back-to-top {
+  @include mixins.button-style(variables.$secondary-color, variables.$secondary-text-color);
+  margin-top: 1rem;
+  display: block;
+  width: fit-content;
+  margin: 3rem auto;
+  animation: shake 0.9s ease-in-out infinite;
 }
