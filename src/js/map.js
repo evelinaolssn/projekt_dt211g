@@ -38,6 +38,7 @@ async function getLocation(query) {
       }
 
       getWeather(lat, lon); 
+      getEvent(lat, lon);
 
       currentMarker = L.marker([lat, lon]).addTo(map);
 
