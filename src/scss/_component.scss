@@ -82,6 +82,16 @@
   border: 3px solid variables.$dark-secondary-color;
 }
 
+//Styling for event element
+#events ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+#events a {
+ color: variables.$dark-secondary-color;
+}
+
 //Styling for weather element 
 #weather {
   background-color: variables.$secondary-color;
