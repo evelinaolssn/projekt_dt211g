@@ -128,3 +128,8 @@ footer {
     background-color: variables.$secondary-color;
     color: variables.$secondary-text-color;
 }
+
+//Smooth scrolling 
+html {
+  scroll-behavior: smooth;
+}
