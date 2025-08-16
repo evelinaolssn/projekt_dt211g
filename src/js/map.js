@@ -37,6 +37,8 @@ async function getLocation(query) {
         map.removeLayer(currentMarker);
       }
 
+      getWeather(lat, lon); 
+
       currentMarker = L.marker([lat, lon]).addTo(map);
 
     } else {
